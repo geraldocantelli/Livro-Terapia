@@ -1,8 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Read the /ReadMeFirst/ReadMeFirst.tex for an introduction. Check out the accompanying book "Better Books with LaTeX" for a discussion of the template and step-by-step instructions. The template was originally created by Clemens Lode, LODE Publishing (www.lode.de), mail@lode.de, 8/17/2018. Feel free to use this template for your book project!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{balance} 
 \usepackage{booktabs}
 \usepackage{longtable}
+
+
 
 % ---------- Preamble
 
@@ -12,6 +15,8 @@
 \fi
 
 \begin{document}
+
+
 % use chapter boxes only for printed books: uncomment \input{lib/chapterbox} and comment out \newcommand{\chapterbox}[1]{} to produce nicer looking chapter pages (but also some warnings due to older packages). 
 \ifxetex
 	%\input{lib/chapterbox}
@@ -23,11 +28,10 @@
 \frontmatter
 
 % front matter chapter entries use roman page numbering (i, ii, iii, iv, ...)
-\pagenumbering{roman}
+\pagenumbering{Roman}
 
 % switch to basic chapter design
 \input{lib/chapterfont}
-
 
 
 \input{front/half-title}\newpage
@@ -46,6 +50,7 @@
 
 % ---------- Main matter
 \mainmatter
+
 
 
 % reset to normal page numbering (1, 2, 3, ...)
@@ -84,6 +89,10 @@
 \input{main/thirtieth}  \blankpage
 \input{main/thirtieth-first}  \blankpage
 \input{main/32}  \blankpage
+\input{main/33}  \blankpage
+\input{main/thirtieth-forth}  \blankpage
+\input{main/thirtieth-fifth}  \blankpage
+
 
 % ---------- Back matter
 \backmatter
@@ -125,3 +134,4 @@
 \input{back/last}
 
 \end{document}
+\balance
